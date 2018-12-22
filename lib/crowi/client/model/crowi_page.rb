@@ -45,6 +45,7 @@ class CrowiPage < CrowiModelBase
     params.each do |k,v|
       maker = CrowiModelFactory.instance.maker('page_' + k.to_s)
       maked_params[k] = maker.call(v)
+    rescue ArgumentError # page_lastUpdateUserで発生するエラーへの応急処置
     end
     super(maked_params)
   end
