@@ -139,7 +139,7 @@ protected
   # @return [nil/CPInvalidRequest] バリデーションエラー結果
   def _invalid
     if ! (@param[:body])
-      return CPInvalidRequest.new 'Parameters body is required.'
+      return CPInvalidRequest.new 'Parameter body required.'
     end
   end
 
