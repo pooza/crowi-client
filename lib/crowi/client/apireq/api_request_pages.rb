@@ -62,7 +62,7 @@ class CPApiRequestPagesGet < CPApiRequestBase
   # @param [Hash] param APIリクエストのパラメータ
   def initialize(param = {})
     super('/_api/pages.get', METHOD_GET,
-          { page_id: param[:page_id], 
+          { page_id: param[:page_id],
             path: param[:path], revision_id: param[:revision_id] })
   end
 
@@ -90,7 +90,7 @@ protected
   # @override
   # @return [nil/CPInvalidRequest] バリデーションエラー結果
   def _invalid
-    if ! (@param[:path] || @param[:page_id]) 
+    if ! (@param[:path] || @param[:page_id])
       return CPInvalidRequest.new 'Parameter path or page_id is required.'
     end
   end
@@ -138,8 +138,8 @@ protected
   # @override
   # @return [nil/CPInvalidRequest] バリデーションエラー結果
   def _invalid
-    if ! (@param[:body] && @param[:path]) 
-      return CPInvalidRequest.new 'Parameters body and path are required.'
+    if ! (@param[:body])
+      return CPInvalidRequest.new 'Parameters body is required.'
     end
   end
 
@@ -185,7 +185,7 @@ protected
   # @override
   # @return [nil/CPInvalidRequest] バリデーションエラー結果
   def _invalid
-    if ! (@param[:page_id] && @param[:body]) 
+    if ! (@param[:page_id] && @param[:body])
       return CPInvalidRequest.new 'Parameters page_id and body are required.'
     end
   end
@@ -231,7 +231,7 @@ protected
   # @override
   # @return [nil/CPInvalidRequest] バリデーションエラー結果
   def _invalid
-    if ! (@param[:page_id]) 
+    if ! (@param[:page_id])
       return CPInvalidRequest.new 'Parameter page_id required.'
     end
   end
@@ -276,7 +276,7 @@ protected
   # @override
   # @return [nil/CPInvalidRequest] バリデーションエラー結果
   def _invalid
-    if ! (@param[:page_id]) 
+    if ! (@param[:page_id])
       return CPInvalidRequest.new 'Parameter page_id required.'
     end
   end
@@ -321,7 +321,7 @@ protected
   # @override
   # @return [nil/CPInvalidRequest] バリデーションエラー結果
   def _invalid
-    if ! (@param[:page_id]) 
+    if ! (@param[:page_id])
       return CPInvalidRequest.new 'Parameter page_id required.'
     end
   end
@@ -368,7 +368,7 @@ protected
   # @override
   # @return [nil/CPInvalidRequest] バリデーションエラー結果
   def _invalid
-    if ! (@param[:path]) 
+    if ! (@param[:path])
       return CPInvalidRequest.new 'Parameter path required.'
     end
   end
@@ -412,7 +412,7 @@ protected
   # @override
   # @return [nil/CPInvalidRequest] バリデーションエラー結果
   def _invalid
-    if ! (@param[:page_id] || @param[:revision_id]) 
+    if ! (@param[:page_id] || @param[:revision_id])
       return CPInvalidRequest.new 'Parameter page_id or revision_id is required.'
     end
   end
