@@ -6,12 +6,12 @@ require "crowi/client/version"
 Gem::Specification.new do |spec|
   spec.name          = "crowi-client"
   spec.version       = Crowi::Client::VERSION
-  spec.authors       = ["Ryu Sato"]
-  spec.email         = ["ryu@weseek.co.jp"]
+  spec.authors       = ["pooza"]
+  spec.email         = ["tkoishi@b-shock.co.jp"]
 
   spec.summary       = %q{Client of crowi}
   spec.description   = %q{crowi-client is client of crowi with use API.}
-  spec.homepage      = "https://github.com/ryu-sato/crowi-client"
+  spec.homepage      = "https://github.com/pooza/crowi-client"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
